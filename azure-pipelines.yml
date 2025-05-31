@@ -1,16 +1,15 @@
 trigger:
-  - master
+- master
 
 pool:
   name: Default
 
 steps:
-  - script: echo Myfirst Azure Pipeline for maven project
-    displayName: 'Run a one-line script'
+- script: echo My first Azure Pipeline for Maven project
+  displayName: 'Run a one-line script'
 
-  - script: mvn clean install
-    displayName: 'Build with maven'
+- script: mvn clean install
+  displayName: 'Build with Maven'
 
-  -   - script: java -jar target/MyMavenApp-1.0-SNAPSHOT.jar
-    displayName: 'Running jar'
-
+- script: java -jar target/MyMavenApp-1.0-SNAPSHOT.jar
+  displayName: 'Run the JAR file'
